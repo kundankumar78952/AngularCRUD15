@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <legend>Add Details Form</legend>
+        </div>
+    </div>
+    <form>
+        <div class="mb-3">
+          <label for="formGroupExampleInput">Id</label>
+          <input type="text" name="Id" [(ngModel)]="dataFormHub.Id"  class="form-control" id="formGroupExampleInput" placeholder="Id">
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput">Name</label>
+          <input type="text" name="Name" [(ngModel)]="dataFormHub.Name"class="form-control" id="formGroupExampleInput" placeholder="Name">
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput">Mobile</label>
+          <input type="text" name="Mobile"  [(ngModel)]="dataFormHub.Mobile" class="form-control" id="formGroupExampleInput" placeholder="Name">
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput">Email</label>
+          <input type="text" name="Email" [(ngModel)]="dataFormHub.Email" class="form-control" id="formGroupExampleInput" placeholder="Email">
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput">Company</label>
+          <input type="text" name="Company" [(ngModel)]="dataFormHub.Company" class="form-control" id="formGroupExampleInput" placeholder="Company">
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput">Designation</label>
+          <input type="text" name="Designation" [(ngModel)]="dataFormHub.Designation" class="form-control" id="formGroupExampleInput" placeholder="Designation">
+        </div>
+       <div class="auto">
+        <button class="btn btn-primary" type="submit" (click)="postData()">Submit</button>
+       </div>
+    </form>
+</div>

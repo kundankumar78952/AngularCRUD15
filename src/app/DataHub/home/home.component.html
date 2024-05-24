@@ -1,0 +1,34 @@
+<div class="container">
+<div class="row mt-2 mb-2">
+<div class="col col-md-4 offset-5">
+    <a routerLink="/Datahub/create" class="btn btn bg-primary"  href="#">Add Details</a>
+</div>
+</div>
+</div>
+<div class="container-fluid">
+<table class="table">
+    
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">Email</th>
+        <th scope="col">Company</th>
+        <th scope="col">Designation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of allData">
+        <th scope="row">{{item.Id}}</th>
+        <td>{{item.Name}}</td>
+        <td>{{item.Mobile}}</td>
+        <td>{{item.Email}}</td>
+        <td>{{item.Company}}</td>
+        <td>{{item.Designation}}</td>
+        <td><a routerLink="/Datahub/edit/"  class="btn btn-primary">Edit</a></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+<router-outlet></router-outlet>

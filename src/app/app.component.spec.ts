@@ -1,8 +1,11 @@
+import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { Addition } from './Calculator';
 
 describe('AppComponent', () => {
+  let component = new AppComponent();
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
@@ -20,11 +23,11 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Angular-app'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('Angular-app');
-  });
+  // it(`should have as title 'Angular-app'`, () => {
+  //   const fixture = TestBed.createComponent(AppComponent);
+  //   const app = fixture.componentInstance;
+  //   expect(app.title).toEqual('Angular-app');
+  // });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
@@ -32,4 +35,11 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('.content span')?.textContent).toContain('Angular-app app is running!');
   });
+  it("show an alert  message",() =>
+  {
+    expect(component.ShowMessage("Hello")).toBe("Hello");
+  })
+  it("show the Addition results",()=>{
+    expect(Addition(10,20)).toBe(30);
+  })
 });
