@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AddEditEmpComponent } from './add-edit-emp/add-edit-emp.component';
+import { ServiceService } from './shared/service.service';
 
 @Component({
   selector: 'app-root',
@@ -17,9 +18,9 @@ export class AppComponent implements OnInit {
   // isDisabled = true;
   // message:string="";
   // @ViewChild(HeaderComponent)header:any;
-  constructor(private dialog: MatDialog){}
+  constructor(private dialog: MatDialog, private service:ServiceService){}
   ngOnInit():void{
-
+    this.getEmployeeList();
   }
 //   ngAfterViewInit(): void {
 //     // this.message = this.header.childdata;
@@ -117,5 +118,17 @@ export class AppComponent implements OnInit {
 
 openAddEditEmployeeForm(){
   this.dialog.open(AddEditEmpComponent);
+}
+
+getEmployeeList(){
+  this.service.getAllEmployees().subscribe({
+    next: (res) => {
+      console.log(res);
+    },
+    error: (err) => {
+      alert(err);
+    },
+   
+  })
 }
 }

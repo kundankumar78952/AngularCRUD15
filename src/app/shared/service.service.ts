@@ -12,12 +12,12 @@ export class ServiceService {
   
   //Create Data
   addEmployee(data:any):Observable<any>{
-    return this.http.post("http://localhost:3000/Employees", data);
+    return this.http.post("http://localhost:3000/employees", data);
   }
 
   //fetch Data
   getAllEmployees():Observable<any>{
-    return this.http.get("http://localhost:3000/Employees");
+    return this.http.get("http://localhost:3000/employees");
   }
   
 }

@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServersComponent } from './servers/servers.component';
 import { ServerComponent } from './server/server.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { DataHubModule } from './data-hub/data-hub.module';
 import { HomeComponent } from './DataHub/home/home.component';
@@ -24,7 +24,10 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { AddEditEmpComponent } from './add-edit-emp/add-edit-emp.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
-
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -54,7 +57,14 @@ import {MatInputModule} from '@angular/material/input';
     DataHubModule,
     MatDialogModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatRadioModule,
+    ReactiveFormsModule,
+    MatSelectModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [DataHubModule],
   bootstrap: [AppComponent]

@@ -5,3 +5,13 @@
     display: flex;
     gap:10px ;
 }
+mat-form-field{
+    width: 100%;
+}
+
+button{
+    flex: 1;
+}
+.educa{
+    padding-top:13px;
+}
