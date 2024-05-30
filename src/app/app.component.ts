@@ -1,5 +1,4 @@
-import { Component, OnInit, ViewChild,AfterViewInit } from '@angular/core';
-import { HeaderComponent } from './header/header.component';
+import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AddEditEmpComponent } from './add-edit-emp/add-edit-emp.component';
 
