@@ -9,6 +9,7 @@ export class ServiceService {
 
   constructor(private http: HttpClient) { }
 
+  
   //Create Data
   addEmployee(data:any):Observable<any>{
     return this.http.post("http://localhost:3000/Employees", data);
