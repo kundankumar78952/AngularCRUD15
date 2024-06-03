@@ -25,7 +25,7 @@ this.empForm= this.fb.group({lastname:'',firstname:'',email:'',dob:'',gender:'',
       console.log(this.empForm.value);
       this.service.addEmployee(this.empForm.value).subscribe({
         next :(value:any) =>{
-          alert("Employee data added successfully");
+          // alert("Employee data added successfully");
           this.dialogref.close();
 
         },
